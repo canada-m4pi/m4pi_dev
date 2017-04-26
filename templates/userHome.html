@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>m4PI</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../static/css/normalize.css">
+  <link rel="stylesheet" href="../static/css/skeleton.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Javascript
+  ------------------------------------------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../static/js/site.js"></script>
+  <script>
+    $( document ).ready(function() {
+        $('.hide').hide();
+    });
+
+  </script>
+  <script>
+ function scroll(where){
+	where="#"+where;
+    $('html,body').animate({
+        scrollTop: $(where).offset().top-65},
+        'slow');
+	}
+
+  function pop_slide(where){
+	where="#"+where;
+        $(where).slideToggle("slow");
+  }
+
+  </script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../static/images/favicon.png">
+
+</head>
+<body>
+
+<div class="navbar-spacer"></div>
+
+     <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">m4PI</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" onclick="scroll('music')">Your Music!</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" onclick="scroll('help')">Help!</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+	  <li class="navbar-item"><a class="navbar-link" href="/signout">Sign Out</a></li>
+	  <li class="navbar-item"><a class="navbar-link" onclick="scroll('contact')" >Contact Us</a></li>
+        </ul>
+      </div>
+    </nav> 
+
+<div class="heading">
+  <div class="container">
+    <div class="row" style="opacity:1;">
+      <div class="one-half column">
+        <h1>Home! </h1>
+        <h3>Here is what's new with you, {{name}}!</h3>
+      </div>
+      <div class="one-half column">
+        <img src="../static/images/music2.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="info-block">
+  <div class="container" id="music">
+	<h1>Your Music!</h1>
+    <row>
+      <div id="items">
+	<ul>
+		{% for file in filesToLoad %}
+  			<li><a href="http://m4pi.duckdns.org/uploads/{{ file }}">{{ file }}</a></li>
+		{% endfor %}
+	</ul>
+      </div>
+    </row>
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="info-block"> 
+  <div class="container" id="help">
+    <row>
+      <h1>Help Is Here!</h1>
+	<p>We are currently in the development phase of this project, and may experience glitches from time to time. Please excuse us. Contact us below for more assistance.</p>
+    </row>
+  </div>
+</div> 
+
+<div class="parallax"></div>
+
+<div class="info-block" >
+ <div class="container">
+ <div class="row">
+  <div class="footer" id="contact">
+    <p ><i class="material-icons">code</i> Site Developed By: m4PI  <i class="material-icons">code</i></p> 
+    <p><a href="mailto:nicholas.giamblanco@ryerson.ca?Subject=m4pi" target="_top">nicholas.giamblanco@ryerson.ca</a></p>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

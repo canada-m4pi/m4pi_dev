@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>m4PI</title>
+  <meta name="description" content="m4PI">
+  <meta name="author" content="m4PI">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../static/css/raleway.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../static/css/normalize.css">
+  <link rel="stylesheet" href="../static/css/skeleton.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Javascript
+  ------------------------------------------------- -->
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <script src="../static/js/site.js"></script>
+  <script>
+    $( document ).ready(function() {
+        $('.hide').hide();
+    });
+
+  </script>
+  <script>
+ function scroll(where){
+	where="#"+where;
+    $('html,body').animate({
+        scrollTop: $(where).offset().top-65},
+        'slow');
+	}
+
+  function pop_slide(where){
+	where="#"+where;
+        $(where).slideToggle("slow");
+  }
+
+  </script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../static/images/favicon.png">
+
+</head>
+<body>
+
+<div class="navbar-spacer"></div>
+
+     <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">m4PI</a>
+            <div id="moreNavPopover" class="popover">
+              <ul class="popover-list">
+                <li class="popover-item">
+                  <a class="popover-link" onclick="scroll('intro')">What We Do</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" onclick="scroll('creators')">Who We Are</a>
+                </li>
+		<li class="popover-item">
+		  <a class="popover-link" onclick="scroll('benefits')">Benefits</a>
+		</li>
+                <li class="popover-item">
+                  <a class="popover-link" onclick="scroll('contact')"> Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+	  <li class="navbar-item"><a class="navbar-link" href="/signup">Sign Up! <i class="material-icons">add</i></a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/signin">Sign In! <i class="material-icons">perm_identity</i></a></li>
+        </ul>
+      </div>
+    </nav> 
+
+<div class="heading">
+  <div class="container">
+    <div class="row" style="opacity:1;">
+      <div class="one-half column">
+        <h1>m4PI: </h1>
+	<p><b>m</b>usic <b>4</b> <b>P</b>hysically <b>I</b>mpaired</p>
+      </div>
+      <div class="one-half column">
+        <img src="../static/images/music2.png">
+      </div>
+    </div>
+    <div class="container">
+       <p>Production that stands in the way of nothing.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="parallax" id="para1"></div>
+
+<div class="info-block" >
+  <div class="container" id="intro">
+      	<div class="row" >
+  		<h1><b>m</b>usic <b>4</b> <b>P</b>hysically <b>I</b>mpaired</h1>
+	</div>
+	<div class="row">
+		<p> Reaching new levels of music making. </p>
+	</div>
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="info-block">
+  <div class="container">
+   <div class="row" id="benefits">
+     <p> With m4Pi, we bring music creation technology to everyone. Literally everyone.
+         Especially those with disabilities. Our goal is to enable users with physical impairements
+         to explore their musical aspirations, without any physcial requirment. That is, you can produce
+         with the use of just your voice.
+     </p>
+   </div>
+  </div>
+</div>
+
+
+<div class="parallax"></div>
+
+<div class="info-block" >
+  <div class="container" >
+    <div class="row" style="margin-top: 10%">
+     <h1 id="creators">Creators</h1>
+    </div>
+    <div class="row" >
+      <div class="one-third column">
+        <img src="../static/images/contact.png">
+      </div>
+      <div class="one-half column">
+	<h2>Nick Dimitrakopoulos</h2>
+        <p>Nick is a signal processing expert. His experience in this field deals with audio processing, and music production.</p>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="one-third column">
+        <img src="../static/images/contact.png">
+      </div>
+      <div class="one-half column">
+	<h2>Rayan Islam</h2>
+        <p>Rayan is a graduate of Ryerson University's Electrical Engineering program, and has a specialization in multimedia. He has a sufficient background in music theory</p>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="one-third column">
+        <img src="../static/images/contact.png">
+      </div>
+      <div class="one-half column">
+	<h2>Nick Giamblanco</h2>
+        <p>Nick is a wireless security researcher  and has recently published a paper on keyword extraction techniques. His expertise is in software development.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+<div class="info-block" >
+ <div class="container">
+ <div class="row">
+  <div class="footer" id="contact">
+    <code>Developed By: m4Pi </code>
+    <p><a href="mailto:nicholas.giamblanco@ryerson.ca?Subject=m4Pi%20Site" target="_top">nicholas.giamblanco@ryerson.ca</a></p>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

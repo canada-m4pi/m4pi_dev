@@ -1,0 +1,33 @@
+DROP PROCEDURE IF EXISTS sp_createUser;
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
+IN p_email TEXT,
+IN p_password TEXT,
+IN p_name TEXT,
+IN p_gender TEXT
+)
+BEGIN
+IF(SELECT EXISTS(SELECT * FROM USERS WHERE email = p_email)) THEN
+  SELECT 'USER EXISTS';
+ELSE
+  INSERT INTO USERS(email,password,name,gender) values(p_email,p_password,p_name,p_gender);
+END IF;
+END $$
+
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS sp_verifyUser;
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_verifyUser`(
+IN p_email TEXT
+)
+BEGIN
+IF(SELECT EXISTS(SELECT * FROM USERS WHERE email = p_email)) THEN
+  SELECT * from USERS where p_email=email;
+ELSE
+  SELECT 'User does not exist.';
+END IF;
+END $$
+
+DELIMITER ;

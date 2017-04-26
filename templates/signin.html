@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>m4PI - Sign In!</title>
+  <meta name="description" content="m4PI">
+  <meta name="author" content="m4PI">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="../static/css/raleway.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../static/css/normalize.css">
+  <link rel="stylesheet" href="../static/css/skeleton.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Javascript
+  ------------------------------------------------- -->
+  <script src="../static/js/jquery-3.1.1.min.js"></script>
+  <script src="../static/js/site.js"></script>
+  <script>
+    $( document ).ready(function() {
+        $('.hide').hide();
+    });
+
+  </script>
+  <script>
+ function scroll(where){
+	where="#"+where;
+    $('html,body').animate({
+        scrollTop: $(where).offset().top-65},
+        'slow');
+	}
+
+  function pop_slide(where){
+	where="#"+where;
+        $(where).slideToggle("slow");
+  }
+  function CheckPassword(password, cfPassword){   
+	var passw=  /^[A-Za-z]\w{8,16}$/;  
+	if(password.value.match(passw)){
+		if(password.value===cfPassword.value){
+			return true;
+   		}else{
+			return false;
+		}
+	}  
+	else{
+		return false;  
+	}  
+   } 
+
+  </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../static/images/favicon.png">
+
+</head>
+<body>
+
+<div class="navbar-spacer"></div>
+
+     <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+	<li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/signin">Sign In!</a></li>
+	<li class="navbar-item"><a class="navbar-link" href="/signup">Sign Up!</a></li>
+	<li class="navbar-item"><a class="navbar-link" href="/help">Help!</a></li>
+        </ul>
+      </div>
+    </nav> 
+
+<div class="heading">
+  <div class="container" id="intro">
+      	<div class="row" style="opacity:1;">
+		<div class="one-half column">
+  			<h1>Sign In to m4Pi!</h1>
+		</div>
+		<div class="one-half column">
+			<img height="192" src="../static/images/signup.png">
+		</div>
+	</div>
+	<div class="row" style="opacity:1;">
+        <form action="/auth_user" method="post" name="suform">
+                <div class="row" style="opacity:1;">
+                  <div class="one-half column">
+                        <label for="EmailInput">Your email</label>
+                        <input class="u-full-width" type="Email" name="email" placeholder="verycoolemail@mailbox.com" id="EmailInput">
+                        <div style="clear:both;">&nbsp;</div>
+                        <label for="inputPassword">Password:</label><br>
+                        <input class="u-full-width" type="password" name="password" id="password" placeholder="Super Secure Password..?" required><br>
+                        <input class="button-primary" type="submit" value="Sign In">
+                </div>
+                </div>
+        </form>
+	</div>
+  </div>
+</div>
+
+<div class="parallax"></div>
+
+
+<div class="info-block" >
+ <div class="container">
+ <div class="row">
+  <div class="footer" id="contact">
+    <p ><i class="material-icons">code</i> Site Developed By: m4PI  <i class="material-icons">code</i></p> 
+    <p><a href="mailto:nicholas.giamblanco@ryerson.ca?Subject=m4Pi%20Site" target="_top">nicholas.giamblanco@ryerson.ca</a></p>
+   </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
